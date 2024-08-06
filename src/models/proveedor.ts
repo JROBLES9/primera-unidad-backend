@@ -1,7 +1,7 @@
 import { DataTypes} from 'sequelize';
 import sequelize from '../db/db';
 
-const proveedorModel = sequelize.define('rol', {
+const proveedorModel = sequelize.define('proveedor', {
     idProveedor: {
         type: DataTypes.INTEGER,
         primaryKey: true,

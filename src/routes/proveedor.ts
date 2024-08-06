@@ -3,7 +3,7 @@ import proveedorController from '../controllers/proveedor';
 
 const router = Router();
 
-router.get('/all', proveedorController.getAll);
+router.get('/getAll', proveedorController.getAll);
 router.get('/:id', proveedorController.getById);
 // router.post('/', proveedorController.createUsuario);
 // router.put('/:id', proveedorController.updateUsuario);
