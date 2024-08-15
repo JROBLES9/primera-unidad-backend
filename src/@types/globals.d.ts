@@ -41,3 +41,11 @@ export interface cliente {
     telefono: string;
     nit: string;
 }
+
+export interface Horario {
+    idHorario: number;
+    dia: string;
+    horaEntrada: string;
+    horaSalida: string;
+    idRrhh: number;
+}
