@@ -9,6 +9,7 @@ import usuario from './routes/usuario';
 import auth from './routes/auth';
 import proveedor from './routes/proveedor';
 import clientes from './routes/clientes';
+import horario from './routes/horario';
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use('/api/usuario', tokenVerify, usuario);
 app.use('/api/auth', auth);
 app.use('/api/proveedor', proveedor);
 app.use('/api/cliente', clientes);
+app.use('/api/horario', horario);
 
 const port = process.env.SERVER_PORT || 3000;
 
