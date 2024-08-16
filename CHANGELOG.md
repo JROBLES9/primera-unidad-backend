@@ -31,3 +31,7 @@
 - Module venta
 - Module lote
 
+## [1.0.0] - 16-08-2024
+### Added
+- Endpoint inventario
+
