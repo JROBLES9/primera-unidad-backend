@@ -7,9 +7,9 @@ export class HorarioController {
     static async createHorario(req: Request, res: Response) {
         try {
             req.body.estadoActivo = true;
-            req.body.dia = new Set(req.body.dia);
 
-
+            
+            
             const restult = horarioValidation(req.body);
             if (!restult.success) {
                 return res.status(400).send(restult.error);

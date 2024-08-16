@@ -1,10 +1,11 @@
 import zod from 'zod';
 
 const HorarioSchema = zod.object({
-    dia: zod.set(zod.string()),
+    dia: zod.string(),
     horaEntrada: zod.string().time(),
     horaSalida: zod.string().time(),
     idRrhh: zod.number(),
+    estadoActivo: zod.boolean()
 });
 
 const horarioValidation = (data: any) => {

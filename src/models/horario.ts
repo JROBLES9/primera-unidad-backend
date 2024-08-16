@@ -8,7 +8,7 @@ const HorarioModel = sequelize.define('horario', {
         autoIncrement: true
     },
     dia: {
-        type: DataTypes.ARRAY(DataTypes.STRING)
+        type: DataTypes.STRING
     },
     horaEntrada: {
         type: DataTypes.TIME
@@ -18,6 +18,9 @@ const HorarioModel = sequelize.define('horario', {
     },
     idRrhh: {
         type: DataTypes.INTEGER
+    },
+    estadoActivo: {
+        type: DataTypes.BOOLEAN
     }
 }, {
     tableName: 'horario',
