@@ -15,6 +15,26 @@ export class LoteController {
             }
         }
     
+        public static async getAllbyIdProducto(req: Request, res: Response) {
+            try {
+                const idProducto = req.params.idProducto;
+                
+                if (!idProducto) {
+                    return res.status(400).json({ message: "Se requiere el parámetro idProducto." });
+                }
+        
+                const lotes = await loteModel.findAll({
+                    where: {
+                        idProducto: idProducto
+                    }
+                });
+        
+                res.json(lotes);
+            } catch (error) {
+                res.status(500).json({ message: "Error al obtener los lotes.", error });
+            }
+        }
+
         public static async getLoteById(req: Request, res: Response) {
             try {
                 const id = parseInt(req.params.id);
