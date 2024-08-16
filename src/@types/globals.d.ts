@@ -41,3 +41,14 @@ export interface cliente {
     telefono: string;
     nit: string;
 }
+
+export interface pedido {
+    idPedido: number;
+    descripcion: string;
+    precioCompra: number;
+    estadoRecibido: boolean;
+    fechaPedido: Date;
+    idProducto: number;
+    idProveedor: number;
+}
+
