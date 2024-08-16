@@ -25,12 +25,12 @@ app.use('/api/rol', tokenVerify, rol);
 app.use('/api/rrhh', tokenVerify, rrhh);
 app.use('/api/usuario', tokenVerify, usuario);
 app.use('/api/auth', auth);
-app.use('/api/proveedor', proveedor);
-app.use('/api/cliente', clientes);
+app.use('/api/proveedor', tokenVerify, proveedor);
+app.use('/api/cliente', tokenVerify, clientes);
 app.use('/api/producto', producto);
 app.use('/api/lote', lote);
-app.use('/api/venta', venta);
-app.use('/api/detalleVenta', detalleVenta);
+app.use('/api/venta', tokenVerify, venta);
+app.use('/api/detalleVenta', tokenVerify, detalleVenta);
 
 const port = process.env.SERVER_PORT || 3000;
 
