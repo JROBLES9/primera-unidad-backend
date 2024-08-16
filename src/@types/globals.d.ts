@@ -78,3 +78,11 @@ export interface venta {
     idCliente: number;
     idRrhh: number;
 }
+
+export interface Horario {
+    idHorario: number;
+    dia: string;
+    horaEntrada: string;
+    horaSalida: string;
+    idRrhh: number;
+}

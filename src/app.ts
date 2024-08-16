@@ -13,6 +13,8 @@ import producto from './routes/producto';
 import lote from './routes/lote';
 import venta from './routes/venta';
 import detalleVenta from './routes/detalleVenta';
+import horario from './routes/horario';
+import Inventario from './routes/inventario'; 
 
 dotenv.config();
 
@@ -31,6 +33,10 @@ app.use('/api/producto', producto);
 app.use('/api/lote', lote);
 app.use('/api/venta', venta);
 app.use('/api/detalleVenta', detalleVenta);
+app.use('/api/venta', tokenVerify, venta);
+app.use('/api/detalleVenta', tokenVerify, detalleVenta);
+app.use('/api/horario', horario);
+app.use('/api/inventario', Inventario);
 
 const port = process.env.SERVER_PORT || 3000;
 
