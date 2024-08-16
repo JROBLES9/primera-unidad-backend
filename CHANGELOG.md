@@ -21,3 +21,13 @@
 - Add new Properties to module Rrrhh
 - Add state active to module Usuario
 - Add route restore at usuario
+
+## [0.8.0] - 16-08-2024
+### Added
+- Module horarios
+- Module detalleventa
+- Module producto
+- Module proveedor
+- Module venta
+- Module lote
+
