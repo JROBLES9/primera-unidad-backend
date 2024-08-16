@@ -2,14 +2,14 @@ import { z } from 'zod';
 
 export const loteSchema = z.object({
     idLote: z.number().int().optional(),
-    categoria: z.string().max(255),
-    cantidadInicial: z.number().int(),
-    cantidadDisponible: z.number().int(),
-    fechaCaducidad: z.string().date(),
-    fechaIngreso: z.string().date(),
-    estadoActivo: z.number().int(),
-    idPedido: z.number().int(),
-    idProducto: z.number().int()
+    categoria: z.string(),
+    cantidadInicial: z.string().regex(/^\d+$/),
+    cantidadDisponible: z.string().regex(/^\d+$/),
+    fechaCaducidad: z.string().date().optional(),
+    fechaIngreso: z.string().date().optional(),
+    idPedido: z.string().regex(/^\d+$/),
+    idProducto: z.string().regex(/^\d+$/),
+    estadoActivo: z.string().regex(/^\d+$/).optional()
 });
 
 export const validateLote = (lote: any) => {
