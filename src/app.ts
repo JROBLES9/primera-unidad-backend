@@ -29,8 +29,8 @@ app.use('/api/proveedor', tokenVerify, proveedor);
 app.use('/api/cliente', tokenVerify, clientes);
 app.use('/api/producto', producto);
 app.use('/api/lote', lote);
-app.use('/api/venta', tokenVerify, venta);
-app.use('/api/detalleVenta', tokenVerify, detalleVenta);
+app.use('/api/venta', venta);
+app.use('/api/detalleVenta', detalleVenta);
 
 const port = process.env.SERVER_PORT || 3000;
 
