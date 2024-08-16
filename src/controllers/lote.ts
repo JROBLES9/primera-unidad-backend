@@ -57,7 +57,12 @@ export class LoteController {
                 if (!result.success) {
                     throw result.error;
                 }
-                const newLote = await loteModel.create(result.data);
+
+                const productoData = {
+                    ...result.data,
+                    estadoActivo: 1
+                };
+                const newLote = await loteModel.create(productoData);
                 res.json({ message: "Lote creado exitosamente.", id: (newLote as unknown as Lote).idLote });
             } catch (error) {
                 res.status(500).json({ message: "Error al crear el lote.", error });
